@@ -8,13 +8,13 @@ double etanol = double.Parse(ReadLine()!);
 WriteLine("Digite o preço da Gasolina");
 double gasolina = double.Parse(ReadLine()!);
 
-double calculoRelacao = Math.Round(calcularRelacaoDePreco(gasolina, etanol));
+double calculoRelacao = calcularRelacaoDePreco(gasolina, etanol);
 bool vantagemGasolina = calculoRelacao >= 70;
 
 WriteLine($"\nVantagem abastecer com {(vantagemGasolina ? "Gasolina" : "Etanol")}\nRelação {calculoRelacao} %\n");
 
 double calcularRelacaoDePreco(double gasolina, double etanol)
 {
-    return etanol / gasolina * 100;
+    return Math.Round(etanol / gasolina * 100);
 }
 
