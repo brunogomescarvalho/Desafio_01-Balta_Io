@@ -19,7 +19,7 @@ double trocoCalculado = Math.Round(valorPago - valorCompra, 2);
 
 System.Console.WriteLine($"Troco: {trocoCalculado}");
 
-double[] valores = { 100, 50, 20, 10, 5, 2, 1, .50, .25, .10, .5, .1 };
+double[] valores = { 100, 50, 20, 10, 5, 2, 1, .50, .25, .10, .05, .01 };
 
 List<Troco> valoresNoTroco = new List<Troco>();
 
