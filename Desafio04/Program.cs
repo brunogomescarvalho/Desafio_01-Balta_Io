@@ -76,6 +76,6 @@ public class Troco
 
     public override string ToString()
     {
-        return $" {quantidade} {(cedula > 1 ? "Cédula" : "Moeda")} de R$ {cedula}";
+        return $" {quantidade} {(cedula > 1 ? "Cédula(s)" : "Moeda(s)")} de R$ {cedula}";
     }
 }
