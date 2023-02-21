@@ -32,7 +32,6 @@ foreach (var item in valores)
         bool novaCedula = valoresNoTroco.Find(i => i.cedula == item) == null;
         if (trocoCalculado >= item)
         {
-
             if (novaCedula)
             {
                 trocoAPagar.quantidade++;
@@ -49,7 +48,6 @@ foreach (var item in valores)
                     {
                         i.quantidade++;
                         trocoCalculado -= item;
-
                     }
                 }
             }
