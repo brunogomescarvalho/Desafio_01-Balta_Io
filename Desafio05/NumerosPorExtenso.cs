@@ -55,7 +55,7 @@ public static class NumerosPorExtenso
         return nrPorExtenso + milhares[milhar];
     }
 
-    public static string RecebeNrInformado(long n)
+    public static string ConverteNumeroInformado(long n)
     {
         if (n == 0)
         {
@@ -63,7 +63,7 @@ public static class NumerosPorExtenso
         }
         else if (n < 0)
         {
-            return RecebeNrInformado(-n) + "Negativos";
+            return ConverteNumeroInformado(-n) + "Negativos";
         }
 
         return TransformaEmExtenso(n, " ", 0);
