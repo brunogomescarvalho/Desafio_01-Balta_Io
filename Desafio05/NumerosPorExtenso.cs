@@ -10,7 +10,7 @@ public static class NumerosPorExtenso
 
     private static string TransformaEmExtenso(long n, string nrPorExtenso, int milhar)
     {
-        
+
         if (nrPorExtenso.Length > 0)
         {
             nrPorExtenso += " ";
@@ -36,14 +36,8 @@ public static class NumerosPorExtenso
         else
         {
             var centenaInteira = NumerosPorExtenso.verificaCentena((n));
-        
-            nrPorExtenso += TransformaEmExtenso(n % 1000, n % 100 == 0 ? TransformaEmExtenso(n / 1000, " ", milhar + 1) + (centenaInteira ? " " : " e") :
-            TransformaEmExtenso(n / 1000, " ", milhar + 1), 0);
-
-            if (n % 1000 == 0)
-            {
-                return nrPorExtenso;
-            }
+            nrPorExtenso += TransformaEmExtenso(n % 1000, n % 100 == 0 ? TransformaEmExtenso(n / 1000, " ", milhar + 1) + (centenaInteira ? "" : " e") :
+            TransformaEmExtenso(n / 1000, "", milhar + 1), 0);
         }
 
         return nrPorExtenso + milhares[milhar];
@@ -51,14 +45,14 @@ public static class NumerosPorExtenso
 
     public static string ConverteNumeroInformado(long n)
     {
+        if (n > 999999999999)
+            return "Número não suportado";
+
         if (n == 0)
-        {
             return "Zero";
-        }
+
         else if (n < 0)
-        {
             return ConverteNumeroInformado(-n) + "Negativos";
-        }
 
         return TransformaEmExtenso(n, " ", 0);
     }
