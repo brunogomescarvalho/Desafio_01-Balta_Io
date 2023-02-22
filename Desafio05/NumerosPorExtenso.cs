@@ -8,15 +8,9 @@ public static class NumerosPorExtenso
     static readonly string[] centenas = new string[] { "Cem", "Duzentos", "Trezentos", "Quatrocentos", "Quinhentos", "Seiscentos", "Setecentos", "Oitocentos", "Novecentos" };
     static readonly string[] milhares = new string[] { "", " Mil", " Milhão", " Bilhão" };
 
-    private static string TransformaEmExtenso(long n, string concatenacao, int milhar)
+    private static string TransformaEmExtenso(long n, string nrPorExtenso, int milhar)
     {
-        if (n == 0)
-        {
-            return concatenacao;
-        }
-
-        string nrPorExtenso = concatenacao;
-
+        
         if (nrPorExtenso.Length > 0)
         {
             nrPorExtenso += " ";
