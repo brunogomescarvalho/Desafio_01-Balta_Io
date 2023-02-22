@@ -41,9 +41,9 @@ public static class NumerosPorExtenso
         }
         else
         {
-            var verificaCentena = NumerosPorExtenso.verificaCentena((n));
+            var centenaInteira = NumerosPorExtenso.verificaCentena((n));
         
-            nrPorExtenso += TransformaEmExtenso(n % 1000, n % 100 == 0 ? TransformaEmExtenso(n / 1000, " ", milhar + 1) + (verificaCentena ? " " : " e") :
+            nrPorExtenso += TransformaEmExtenso(n % 1000, n % 100 == 0 ? TransformaEmExtenso(n / 1000, " ", milhar + 1) + (centenaInteira ? " " : " e") :
             TransformaEmExtenso(n / 1000, " ", milhar + 1), 0);
 
             if (n % 1000 == 0)
