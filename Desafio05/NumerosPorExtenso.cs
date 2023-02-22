@@ -46,13 +46,13 @@ public static class NumerosPorExtenso
     public static string ConverteNumeroInformado(long n)
     {
         if (n > 999999999999)
-            return "Número não suportado";
+            throw new Exception("Número não suportado");
 
         if (n == 0)
             return "Zero";
 
         else if (n < 0)
-            return ConverteNumeroInformado(-n) + "Negativos";
+            throw new Exception("Operação não suportada");
 
         return TransformaEmExtenso(n, " ", 0);
     }
@@ -70,14 +70,21 @@ public static class NumerosPorExtenso
     }
     public static string RecebeNumeroERetornaString(string numeroParaConverter)
     {
-        string[] nr = numeroParaConverter.Split(",");
-        int reais = Convert.ToInt32(nr[0]);
-        int centavos = Convert.ToInt32(nr[1]);
-        if (centavos > 99)
-            return "Valor informado inválido";
+        try
+        {
+            string[] nr = numeroParaConverter.Split(",");
+            long reais = Convert.ToInt64(nr[0]);
+            long centavos = Convert.ToInt64(nr[1]);
+            if (centavos > 99)
+                return "Valor informado inválido";
 
-        var reaisPorExtenso = NumerosPorExtenso.ConverteNumeroInformado(reais);
-        var centavosPorExtenso = NumerosPorExtenso.ConverteNumeroInformado(centavos);
-        return $"\n\n{reaisPorExtenso} {(reais >1? "Reais": "Real")} {(centavos > 0 ? "e" + centavosPorExtenso + " Centavos"+"\n\n": "\n\n")}";
+            var reaisPorExtenso = NumerosPorExtenso.ConverteNumeroInformado(reais);
+            var centavosPorExtenso = NumerosPorExtenso.ConverteNumeroInformado(centavos);
+            return reais > 0 ? $"\n\n{reaisPorExtenso} {(reais > 1 ? "Reais" : "Real")} {(centavos > 0 ? "e" + centavosPorExtenso + " Centavos" + "\n\n" : "\n\n")}" : centavosPorExtenso + " Centavos" + "\n\n";
+        }
+        catch (Exception ex)
+        {
+            return ex.Message;
+        }
     }
 }
