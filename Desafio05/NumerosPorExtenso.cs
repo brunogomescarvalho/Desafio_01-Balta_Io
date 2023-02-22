@@ -68,4 +68,16 @@ public static class NumerosPorExtenso
 
         return false;
     }
+    public static string RecebeNumeroERetornaString(string numeroParaConverter)
+    {
+        string[] nr = numeroParaConverter.Split(",");
+        int reais = Convert.ToInt32(nr[0]);
+        int centavos = Convert.ToInt32(nr[1]);
+        if (centavos > 99)
+            return "Valor informado inválido";
+
+        var reaisPorExtenso = NumerosPorExtenso.ConverteNumeroInformado(reais);
+        var centavosPorExtenso = NumerosPorExtenso.ConverteNumeroInformado(centavos);
+        return $"\n\n{reaisPorExtenso} {(reais >1? "Reais": "Real")} {(centavos > 0 ? "e" + centavosPorExtenso + " Centavos"+"\n\n": "\n\n")}";
+    }
 }
