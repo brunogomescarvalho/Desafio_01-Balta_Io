@@ -6,7 +6,7 @@ public static class NumerosPorExtenso
     static readonly string[] dezena = new string[] { "Dez", "Onze", "Doze", "Treze", "Quatorze", "Quinze", "Dezesseis", "Dezessete", "Dezoito", "Dezenove" };
     static readonly string[] dezenas = new string[] { "Vinte", "Trinta", "Quarenta", "Cinquenta", "Sessenta", "Setenta", "Oitenta", "Noventa" };
     static readonly string[] centenas = new string[] { "Cem", "Duzentos", "Trezentos", "Quatrocentos", "Quinhentos", "Seiscentos", "Setecentos", "Oitocentos", "Novecentos" };
-    static readonly string[] milhares = { "", " Mil", " Milhão", " Bilhão" };
+    static readonly string[] milhares = new string[] { "", " Mil", " Milhão", " Bilhão" };
 
     private static string TransformaEmExtenso(long n, string concatenacao, int milhar)
     {
@@ -41,8 +41,11 @@ public static class NumerosPorExtenso
         }
         else
         {
-            nrPorExtenso += TransformaEmExtenso(n % 1000, n % 100 == 0 ? TransformaEmExtenso(n / 1000, " ", milhar + 1) + " e" : 
+            var verificaCentena = NumerosPorExtenso.verificaCentena((n));
+        
+            nrPorExtenso += TransformaEmExtenso(n % 1000, n % 100 == 0 ? TransformaEmExtenso(n / 1000, " ", milhar + 1) + (verificaCentena ? " " : " e") :
             TransformaEmExtenso(n / 1000, " ", milhar + 1), 0);
+
             if (n % 1000 == 0)
             {
                 return nrPorExtenso;
@@ -52,7 +55,7 @@ public static class NumerosPorExtenso
         return nrPorExtenso + milhares[milhar];
     }
 
-    public static string RecebeNumeroParaConverter(long n)
+    public static string RecebeNrInformado(long n)
     {
         if (n == 0)
         {
@@ -60,9 +63,21 @@ public static class NumerosPorExtenso
         }
         else if (n < 0)
         {
-            return RecebeNumeroParaConverter(-n) + "Negativos";
+            return RecebeNrInformado(-n) + "Negativos";
         }
 
-        return TransformaEmExtenso(n, "", 0);
+        return TransformaEmExtenso(n, " ", 0);
+    }
+
+    public static bool verificaCentena(long valor)
+    {
+
+        double db = Convert.ToDouble(valor);
+        double _db = db / 1000;
+
+        if (Int64.TryParse(_db.ToString(), out valor))
+            return true;
+
+        return false;
     }
 }
