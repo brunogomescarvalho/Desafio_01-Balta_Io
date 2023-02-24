@@ -1,0 +1,15 @@
+C:\Users\7brun\OneDrive\Área de Trabalho\DesafioCarnaval_BaltaIo\Desafio07\bin\Debug\net6.0\Desafio07.exe
+C:\Users\7brun\OneDrive\Área de Trabalho\DesafioCarnaval_BaltaIo\Desafio07\bin\Debug\net6.0\Desafio07.deps.json
+C:\Users\7brun\OneDrive\Área de Trabalho\DesafioCarnaval_BaltaIo\Desafio07\bin\Debug\net6.0\Desafio07.runtimeconfig.json
+C:\Users\7brun\OneDrive\Área de Trabalho\DesafioCarnaval_BaltaIo\Desafio07\bin\Debug\net6.0\Desafio07.dll
+C:\Users\7brun\OneDrive\Área de Trabalho\DesafioCarnaval_BaltaIo\Desafio07\bin\Debug\net6.0\Desafio07.pdb
+C:\Users\7brun\OneDrive\Área de Trabalho\DesafioCarnaval_BaltaIo\Desafio07\obj\Debug\net6.0\Desafio07.csproj.AssemblyReference.cache
+C:\Users\7brun\OneDrive\Área de Trabalho\DesafioCarnaval_BaltaIo\Desafio07\obj\Debug\net6.0\Desafio07.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\7brun\OneDrive\Área de Trabalho\DesafioCarnaval_BaltaIo\Desafio07\obj\Debug\net6.0\Desafio07.AssemblyInfoInputs.cache
+C:\Users\7brun\OneDrive\Área de Trabalho\DesafioCarnaval_BaltaIo\Desafio07\obj\Debug\net6.0\Desafio07.AssemblyInfo.cs
+C:\Users\7brun\OneDrive\Área de Trabalho\DesafioCarnaval_BaltaIo\Desafio07\obj\Debug\net6.0\Desafio07.csproj.CoreCompileInputs.cache
+C:\Users\7brun\OneDrive\Área de Trabalho\DesafioCarnaval_BaltaIo\Desafio07\obj\Debug\net6.0\Desafio07.dll
+C:\Users\7brun\OneDrive\Área de Trabalho\DesafioCarnaval_BaltaIo\Desafio07\obj\Debug\net6.0\refint\Desafio07.dll
+C:\Users\7brun\OneDrive\Área de Trabalho\DesafioCarnaval_BaltaIo\Desafio07\obj\Debug\net6.0\Desafio07.pdb
+C:\Users\7brun\OneDrive\Área de Trabalho\DesafioCarnaval_BaltaIo\Desafio07\obj\Debug\net6.0\Desafio07.genruntimeconfig.cache
+C:\Users\7brun\OneDrive\Área de Trabalho\DesafioCarnaval_BaltaIo\Desafio07\obj\Debug\net6.0\ref\Desafio07.dll
